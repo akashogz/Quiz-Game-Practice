@@ -1,0 +1,125 @@
+body {
+    background-color: rgb(38, 38, 38);
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.quesDisp {
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #2e2e2e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.options button {
+    padding: 10px;
+    width: 200px;
+    font-size: 90%;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: #444;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.options button:hover:not(:disabled) {
+    background-color: #bfbfbf;
+    color: rgb(0, 0, 0);
+}
+
+.options button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.correct {
+    background-color: green !important;
+    color: white;
+}
+
+.wrong {
+    background-color: red !important;
+    color: white;
+}
+
+.shake {
+    animation: shake 0.4s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.next {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.next:hover {
+    background-color: #888;
+}
+
+.high-score {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.final {
+    font-size: 24px;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.final p {
+    margin: 10px 0;
+}
+
+.restart-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.restart-btn:hover {
+    background-color: #888;
+}
